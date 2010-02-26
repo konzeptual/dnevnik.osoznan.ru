@@ -1,3 +1,4 @@
 permalink: /:categories/:title/
 paginate: 10
 markdown: rdiscount
+exclude: Capfile, README.markdown
