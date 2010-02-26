@@ -11,10 +11,10 @@
 
     <div class="postentry">
 
-      {% if content  %}
-      {{ content }}
-      {% else %}
+      {% if page.content  %}
       {{ page.content }}
+      {% else %}
+      {{ content }}
       {% endif %}
     </div>
     <div class="postmetadata">
