@@ -1,0 +1,8 @@
+---
+layout: default
+title: Рубрика "goals"
+---
+<h1 id="goals">Записи в категории "goals"</h1>
+    {% for page in site.categories.goals %}
+      {% include single_post.html %}
+    {% endfor %}

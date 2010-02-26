@@ -1,0 +1,8 @@
+---
+layout: default
+title: Рубрика "puzzles"
+---
+<h1 id="puzzles">Записи в категории "puzzles"</h1>
+    {% for page in site.categories.puzzles %}
+      {% include single_post.html %}
+    {% endfor %}

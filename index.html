@@ -1,0 +1,10 @@
+--- 
+layout: default
+title: Дневник@осознан.ru
+---
+
+{% for page in paginator.posts %}
+{% include single_post.html %}
+{% endfor %}
+
+{% include pagination_navigation.html %}

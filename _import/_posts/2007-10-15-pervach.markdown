@@ -1,0 +1,10 @@
+--- 
+category: life
+layout: default
+title: !binary |
+  0J/QtdGA0LLQsNGH
+
+---
+По совету Стива Павлинки понял, что необходим дневник. Личный.
+
+Чем данный блог и будет.

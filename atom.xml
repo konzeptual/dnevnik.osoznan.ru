@@ -1,0 +1,25 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Codeography</title>
+  <link href="http://codeography.com/atom.xml" rel="self"/>
+  <link href="http://codeography.com/"/>
+  <updated>{{site.time | date\_to\_xmlschema }}</updated>
+  <id>http://dnevnik.osoznan.ru/</id>
+  <author>
+    <name>Konstantin Antipin</name>
+    <email>konstantin.antipin@gmail.com</email>
+  </author>
+  {% for post in site.posts %}
+  <entry>
+    <title>{{ post.title }}</title>
+    <link href="http://dnevnik.osoznan.ru"/>
+    <updated>{{post.date | date\_to\_xmlschema }}</updated>
+    <id>http://dnevnik.osoznan.ru{{ post.id }}</id>
+    <content type="html">{{ post.content | xml\_escape }}</content>
+  </entry>
+  {% endfor %}
+</feed>

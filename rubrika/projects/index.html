@@ -1,0 +1,8 @@
+---
+layout: default
+title: Рубрика "projects"
+---
+<h1 id="projects">Записи в категории "projects"</h1>
+    {% for page in site.categories.projects %}
+      {% include single_post.html %}
+    {% endfor %}

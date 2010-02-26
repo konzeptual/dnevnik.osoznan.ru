@@ -1,0 +1,28 @@
+<div>
+  <h2 class="posttitle"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+  <div class="post-{{ page.id }}">
+    
+    <div class="postmetadata">
+      <span class="postdate">
+	{{ page.date | date: '%d.%m.%Y' }}
+      </span>
+    </div>
+
+
+    <div class="postentry">
+
+      {% if content  %}
+      {{ content }}
+      {% else %}
+      {{ page.content }}
+      {% endif %}
+    </div>
+    <div class="postmetadata">
+      Рубрики:
+      {% for category in page.categories %}
+      <a href="/rubrika/{{category | downcase}}">{{category}}</a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
