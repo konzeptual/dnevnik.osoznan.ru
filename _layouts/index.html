@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<h1> {{ page.title }}</h1>
+<!-- posts in this category -->
+<!-- this code was taken from http://raphinou.github.com/jekyll-base/ -->
+{% unless site.categories[page.categories.last] == nil or site.categories[page.categories.last] == empty  %}
+  {% for page in site.categories[page.categories.last] %}
+    {% include single_post.html %}
+  {% endfor %}
+{% endunless %}
