@@ -19,7 +19,7 @@ set :user, 'konsty'
 
 set :deploy_to, "/home/#{user}/websites/dnevnik.konzeptual.ru"
 
-before 'deploy:update', 'deploy:update_jekyll'
+# before 'deploy:update', 'deploy:update_jekyll'
 
 namespace :deploy do
   
@@ -28,9 +28,21 @@ namespace :deploy do
     task t, :roles => :app do ; end
   end
   
-  desc 'Run jekyll to update site before uploading'
-  task :update_jekyll do
-    %x(rm -rf _site/* && jekyll)
+  # desc 'Run jekyll to update site before uploading'
+  # task :update_jekyll do
+  #   %x(rm -rf _site/* && jekyll)
+  # end
+  
+end
+
+namespace :jekyll do
+  desc "Generates the site on the remote server"
+  task :generate_site do
+    run "cd #{current_release} && rake site:generate"
   end
   
+  desc "Update the jekyll gem"
+  task :update_gem do
+    run "gem install mattmatt-jekyll"
+  end
 end
