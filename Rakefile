@@ -61,7 +61,7 @@ HTML
   end
 
   task :purge do
-    sh "rm _site/Capfile _site/README.markdown _site/Rakefile"
+    sh "rm _site/Capfile _site/Rakefile"
   end
 
   task :generate => ["jekyll", "purge"]
