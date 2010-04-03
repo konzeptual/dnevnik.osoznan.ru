@@ -46,3 +46,5 @@ namespace :jekyll do
     run "gem install mattmatt-jekyll"
   end
 end
+
+after "deploy:update_code", "jekyll:generate_site"
