@@ -17,7 +17,7 @@ set :user, 'konsty'
 
 # set(:dest) { Capistrano::CLI.ui.ask("Destination: ") }
 
-set :deploy_to, "/home/#{user}/websites/dnevnik.konzeptual.ru"
+set :deploy_to, "/home/#{user}/websites/dnevnik.osoznan.ru"
 
 # before 'deploy:update', 'deploy:update_jekyll'
 
