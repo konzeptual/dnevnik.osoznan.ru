@@ -2,7 +2,7 @@
 
 namespace :site do
   task :jekyll => :tags do
-    sh "PATH=$PATH:~/.gem/ruby/1.8/bin jekyll --bluecloth --permalink shortdate"
+    sh "jekyll"
   end
 
   desc 'Generate tags page'
