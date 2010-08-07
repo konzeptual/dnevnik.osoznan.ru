@@ -47,4 +47,10 @@ namespace :jekyll do
   end
 end
 
+namespace :git do
+  task :push do
+    exec 'git push'
+  end
+end
+before 'deploy:update', 'git:push'
 after "deploy:update_code", "jekyll:generate_site"
